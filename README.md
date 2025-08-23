@@ -9,4 +9,4 @@ I have experience in......
 - Microsoft Power Platform
 
 ## Contact
-You can reach me at [LinkedIn](https://www.linkedin.com/username) or [GitHub](https://github.com/username).
+You can reach me at [LinkedIn](https://www.linkedin.com/williamdennis5) or [GitHub](https://github.com/wd7512).

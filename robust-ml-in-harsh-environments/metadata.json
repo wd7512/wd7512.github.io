@@ -1,0 +1,5 @@
+{
+  "name": "Robust ML in Harsh Environments",
+  "description": "Interactive exploration of CNN robustness against Single Event Effects (SEEs) in harsh environments like space.",
+  "requestFramePermissions": []
+}

@@ -1,5 +1,6 @@
 # wd7512.github.io
-Welcome to my personal portfolio!
+
+This repository hosts my personal portfolio website. You can view it live at [https://wd7512.github.io](https://wd7512.github.io).
 
 ## About Me
 I have experience in......

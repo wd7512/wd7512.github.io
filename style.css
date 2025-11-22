@@ -2,16 +2,15 @@
    Global Styles
 ------------------------------ */
 
-:root {
-    --dark: #222;
-    --light: #fdfdfd;
-    --text: #222;
-    --muted: #555;
-    --accent: #ffd700;
-    --max-width: 900px;
 
+:root {
+    --blue-accent: #3a8dde;
+    --blue-light: #eaf6ff;
+    --blue-dark: #1a4a7a;
+    --text: #222;
+    --max-width: 900px;
     --radius: 8px;
-    --transition: 0.2s ease;
+    --transition: 0.18s cubic-bezier(.4,.2,.2,1);
 }
 
 * {
@@ -20,205 +19,84 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-    background: var(--light);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: var(--blue-light);
     color: var(--text);
     line-height: 1.6;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
 }
 
 /* ------------------------------
    Layout
 ------------------------------ */
 
+
 main {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem 1.2rem;
+    padding: 2.5rem 1.2rem;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(58, 141, 222, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
-section {
-    margin: 3rem 0;
-}
+/* ------------------------------
+   Main Link Styles (Homepage)
+------------------------------ */
 
-h1, h2, h3 {
+
+.main-link {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(90deg, var(--blue-accent) 60%, var(--blue-dark) 100%);
+    text-decoration: none;
+    padding: 1.1rem 2.5rem;
+    border-radius: 32px;
     font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: 3rem;
-}
-h2 {
-    font-size: 1.45rem;
-    opacity: 0.9;
-}
-h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-}
-
-/* ------------------------------
-   Navbar
------------------------------- */
-
-.site-header {
-    background: var(--dark);
-    color: white;
-    padding: 0.7rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    gap: 1.6rem;
-    list-style: none;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.3rem 0.5rem;
-    border-radius: var(--radius);
+    font-size: 1.25rem;
+    box-shadow: 0 4px 24px rgba(58, 141, 222, 0.13);
     transition: var(--transition);
-}
-
-.navbar a:hover {
-    background: var(--accent);
-    color: var(--dark);
-}
-
-/* ------------------------------
-   Hero Section
------------------------------- */
-
-.hero {
-    background: var(--dark);
-    color: white;
     text-align: center;
-    padding: 6rem 1.5rem 5rem;
+    letter-spacing: 0.02em;
+    border: none;
+    outline: none;
+    position: relative;
 }
-
-.hero h1 {
-    color: white;
+.main-link:active {
+    transform: scale(0.97);
 }
-
-.hero-links {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-}
-
-.hero-links a {
-    color: var(--dark);
-    background: var(--accent);
-    text-decoration: none;
-    padding: 0.6rem 1.3rem;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: var(--transition);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.hero-links a:hover {
-    background: #ffec80;
+.main-link:hover, .main-link:focus {
+    background: linear-gradient(90deg, var(--blue-dark) 60%, var(--blue-accent) 100%);
+    color: #eaf6ff;
+    box-shadow: 0 8px 32px rgba(58, 141, 222, 0.18);
+    text-shadow: 0 1px 8px rgba(58, 141, 222, 0.12);
 }
 
 /* ------------------------------
-   Lists and Content Blocks
+   CV Link Styles
 ------------------------------ */
 
-ul {
-    padding-left: 1.2rem;
-}
 
-ul li {
-    margin: 0.4rem 0;
-}
-
-.interests-list > li {
-    margin-bottom: 1.3rem;
-}
-
-.pub-list li,
-.proj-list li,
-.exp-list li,
-.talks-list li {
-    margin-bottom: 1.4rem;
-}
-
-/* Emphasis styles */
-span {
-    color: var(--muted);
-}
-
-em {
-    color: var(--muted);
-    font-style: italic;
-}
-
-/* ------------------------------
-   Contact Section
------------------------------- */
-
-.contact-links {
-    margin-top: 0.8rem;
-    display: flex;
-    gap: 1.2rem;
-}
-
-.contact-links a {
-    color: var(--accent);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-links a:hover {
+.cv-link {
+    color: var(--text);
+    background: none;
     text-decoration: underline;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
 }
-
-/* ------------------------------
-   Footer
------------------------------- */
-
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    background: var(--dark);
-    color: white;
-    margin-top: 4rem;
-}
-
-/* ------------------------------
-   Responsive Design
------------------------------- */
-
-@media (max-width: 700px) {
-
-    h1 {
-        font-size: 2.3rem;
-    }
-
-    .hero {
-        padding: 4.2rem 1.2rem 3.6rem;
-    }
-
-    .navbar ul {
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
-    main {
-        padding: 1.5rem 1rem;
-    }
+.cv-link:hover {
+    color: var(--blue-dark);
+    text-decoration: none;
 }

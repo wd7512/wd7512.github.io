@@ -1,13 +1,13 @@
+
 # wd7512.github.io
 
-This is the source code for the personal website hosted on GitHub Pages.
+This site is now a simple landing page with just two links:
 
-## Website
-
-[Visit the website](https://wd7512.github.io/)
+- [View my CV](cv.pdf)
+- [Visit my real personal page](https://wd7512.github.io/home/)
 
 ## Structure
-- `index.html`: Main HTML file
-- `style.css`: Stylesheet
+- `index.html`: Minimal homepage with two links
+- `style.css`: Styles for clean, modern links
 
-Feel free to explore!
+Hosted on GitHub Pages.
